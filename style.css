@@ -107,17 +107,37 @@ nav {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 0 10%;
+    padding: 120px 10%;
+}
+
+.profile-container {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary);
+    box-shadow: 0 0 30px rgba(99, 102, 241, 0.4);
+    transition: var(--transition);
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(99, 102, 241, 0.6);
 }
 
 .hero h1 {
-    font-size: 4.5rem;
+    font-size: 4rem;
     margin-bottom: 1rem;
     line-height: 1.1;
 }
@@ -125,8 +145,16 @@ nav {
 .hero p {
     font-size: 1.2rem;
     color: var(--text-muted);
-    max-width: 600px;
+    max-width: 800px;
     margin-bottom: 2rem;
+}
+
+.hero-bio {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--accent);
+    margin-bottom: 2rem;
+    display: block;
 }
 
 .btn-primary {
@@ -158,11 +186,25 @@ nav {
     margin-bottom: 0.5rem;
 }
 
+.tools-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 0 10%;
+}
+
+.tool-category h3 {
+    margin-bottom: 2rem;
+    color: var(--text-main);
+    font-size: 1.5rem;
+    border-left: 4px solid var(--primary);
+    padding-left: 1rem;
+}
+
 .tools-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 2rem;
-    padding: 0 10%;
 }
 
 .tool-card {
@@ -225,6 +267,7 @@ nav {
     border: 1px solid var(--glass-border);
     aspect-ratio: 4/5;
     transition: var(--transition);
+    cursor: pointer;
 }
 
 .project-card img {
@@ -314,6 +357,54 @@ nav {
     border-radius: 10px;
     font-size: 0.8rem;
     font-weight: 600;
+}
+
+/* Lightbox Styles */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    cursor: zoom-out;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 0 50px rgba(0,0,0,0.5);
+    transform: scale(0.9);
+    transition: var(--transition);
+}
+
+.lightbox.active .lightbox-content {
+    transform: scale(1);
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.close-lightbox:hover {
+    color: var(--primary);
+    transform: scale(1.1);
 }
 
 /* Footer */
