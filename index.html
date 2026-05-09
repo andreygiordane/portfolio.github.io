@@ -22,6 +22,7 @@
     <div class="bg-blobs">
         <div class="blob blob-1"></div>
         <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
     </div>
 
     <nav>
@@ -127,7 +128,10 @@
                         </div>
                         <h3>Solve Chamados</h3>
                         <p>Sistema corporativo de gerenciamento de chamados técnicos com arquitetura DDD, Dockerização e relatórios em PDF (A4).</p>
-                        <a href="https://github.com/andreygiordane/solve-chamados" target="_blank" class="btn-primary">Ver Repositório</a>
+                        <div style="display: flex; gap: 1rem;">
+                            <button class="btn-primary saiba-mais" data-project="solve">Saiba mais</button>
+                            <a href="https://github.com/andreygiordane/solve-chamados" target="_blank" class="btn-primary" style="background: var(--bg-card); border: 1px solid var(--glass-border);">GitHub</a>
+                        </div>
                     </div>
                 </div>
 
@@ -145,7 +149,10 @@
                         </div>
                         <h3>VeloDesk</h3>
                         <p>Plataforma de acesso remoto de baixa latência utilizando WebRTC. Conexão P2P criptografada e controle fluido de mouse/teclado.</p>
-                        <a href="https://github.com/andreygiordane/VeloDesk" target="_blank" class="btn-primary">Ver Repositório</a>
+                        <div style="display: flex; gap: 1rem;">
+                            <button class="btn-primary saiba-mais" data-project="velodesk">Saiba mais</button>
+                            <a href="https://github.com/andreygiordane/VeloDesk" target="_blank" class="btn-primary" style="background: var(--bg-card); border: 1px solid var(--glass-border);">GitHub</a>
+                        </div>
                     </div>
                 </div>
 
@@ -162,7 +169,10 @@
                         </div>
                         <h3>Hubify Chat</h3>
                         <p>Sistema de chat inteligente integrado para centralização de atendimentos e comunicação em tempo real.</p>
-                        <a href="https://github.com/andreygiordane/hubify" target="_blank" class="btn-primary">Ver Repositório</a>
+                        <div style="display: flex; gap: 1rem;">
+                            <button class="btn-primary saiba-mais" data-project="hubify">Saiba mais</button>
+                            <a href="https://github.com/andreygiordane/hubify" target="_blank" class="btn-primary" style="background: var(--bg-card); border: 1px solid var(--glass-border);">GitHub</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -176,7 +186,7 @@
             </div>
             
             <div style="text-align: center;">
-                <a href="mailto:contato@akazure.com" class="btn-primary" style="font-size: 1.2rem; padding: 1.2rem 3rem;">Enviar E-mail</a>
+                <a href="mailto:andreycostaa@gmail.com" class="btn-primary" style="font-size: 1.2rem; padding: 1.2rem 3rem;">Enviar E-mail</a>
             </div>
         </section>
     </main>
@@ -194,6 +204,16 @@
     <div id="lightbox" class="lightbox">
         <span class="close-lightbox">&times;</span>
         <img class="lightbox-content" src="" alt="View image">
+    </div>
+
+    <!-- Dev Modal -->
+    <div id="dev-modal" class="dev-modal">
+        <div class="dev-modal-content">
+            <span class="dev-modal-close">&times;</span>
+            <div id="dev-modal-body">
+                <!-- Content injected via JS -->
+            </div>
+        </div>
     </div>
 
     <!-- Script -->
