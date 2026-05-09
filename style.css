@@ -559,6 +559,93 @@ footer {
 }
 
 /* Responsive Optimization */
+/* Project Details Page Styles */
+.project-details-page {
+    padding: 120px 10% 60px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.details-container {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(20px);
+    padding: 4rem;
+    border-radius: 30px;
+    max-width: 900px;
+    width: 100%;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    transition: var(--transition);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.back-btn:hover {
+    color: var(--primary);
+    transform: translateX(-5px);
+}
+
+.details-header {
+    margin-bottom: 3rem;
+}
+
+.details-header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.details-mockup {
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 3rem;
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+.details-content h2 {
+    color: var(--primary);
+    margin: 2rem 0 1rem;
+}
+
+.details-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+}
+
+.features-list {
+    list-style: none;
+    margin-top: 2rem;
+}
+
+.features-list li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.1rem;
+}
+
+.features-list li i {
+    color: var(--accent);
+}
+
+.tech-stack-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
 @media (max-width: 1024px) {
     .hero {
         flex-direction: column;
@@ -627,6 +714,29 @@ footer {
     
     .nav-links {
         display: none; /* Consider a mobile menu later if needed */
+    }
+}
+
+@media (max-width: 768px) {
+    .project-details-page {
+        padding: 80px 0 0; /* No side padding for a 'free' page */
+    }
+    
+    .details-container {
+        padding: 2rem 1.5rem;
+        border-radius: 0; /* Remove radius for full-screen feel */
+        border-left: none;
+        border-right: none;
+    }
+
+    .details-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .details-mockup {
+        border-radius: 0;
+        margin: 0 -1.5rem 2rem;
+        width: calc(100% + 3rem);
     }
 }
 

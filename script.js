@@ -445,11 +445,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Simple Intersection Observer for Animations
     const observerOptions = {
-        threshold: 0.1
-    };
-
-    // Simple Intersection Observer for Animations
-    const observerOptions = {
         threshold: 0.1,
         rootMargin: "0px 0px -50px 0px"
     };
