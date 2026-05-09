@@ -582,8 +582,32 @@ footer {
     }
     
     .dev-grid {
-        grid-template-columns: 1fr;
+        gap: 6rem;
+    }
+
+    .dev-card, .dev-card:nth-child(even) {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
         gap: 2rem;
+        direction: ltr; /* Reset RTL on mobile */
+    }
+
+    .dev-mockup {
+        order: -1; /* Always image first */
+        width: 100%;
+    }
+
+    .dev-info {
+        width: 100%;
+    }
+
+    .dev-info h3 {
+        font-size: 1.8rem;
+    }
+
+    .tech-tags {
+        justify-content: center;
     }
 
     .tools-container {
