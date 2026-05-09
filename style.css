@@ -276,7 +276,7 @@ nav {
     overflow: hidden;
     background: var(--bg-card);
     border: 1px solid var(--glass-border);
-    aspect-ratio: 4/5;
+    aspect-ratio: 1/1; /* Square cards look better in grid */
     transition: var(--transition);
     cursor: pointer;
 }
@@ -430,7 +430,43 @@ nav {
     transform: rotate(90deg);
 }
 
-/* Dev Modal Styles */
+/* Footer Corrected */
+footer {
+    padding: 6rem 5% 3rem;
+    text-align: center;
+    border-top: 1px solid var(--glass-border);
+    margin-top: 8rem;
+    background: rgba(10, 11, 16, 0.4);
+    backdrop-filter: blur(10px);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.social-links a {
+    font-size: 1.8rem;
+    color: var(--text-muted);
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    color: var(--primary);
+    transform: translateY(-5px);
+}
+
+.footer-text {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
 .dev-modal {
     position: fixed;
     top: 0;
@@ -519,7 +555,7 @@ nav {
     color: var(--accent);
 }
 
-/* Footer */
+/* Responsive Optimization */
 @media (max-width: 1024px) {
     .hero {
         flex-direction: column;
@@ -531,11 +567,54 @@ nav {
         width: 220px;
         height: 220px;
     }
+    .hero-content {
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 768px) {
-    .hero h1 { font-size: 3rem; }
-    .dev-card { grid-template-columns: 1fr; gap: 2rem; }
-    .nav-links { display: none; }
-    .portfolio-grid { padding: 0 5%; }
+    .hero h1 { font-size: 2.8rem; }
+    .hero p { font-size: 1.1rem; }
+    
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+        gap: 1rem;
+    }
+    
+    .dev-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .tools-container {
+        gap: 2rem;
+    }
+
+    .tool-category h3 {
+        font-size: 1.2rem;
+    }
+
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tools too */
+    }
+    
+    .nav-links {
+        display: none; /* Consider a mobile menu later if needed */
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr); /* Keep 2 columns but smaller */
+        gap: 0.8rem;
+    }
+    
+    .profile-img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+    }
 }
